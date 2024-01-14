@@ -10,9 +10,9 @@
             switch (name)
             {
                 #region BitComet
-                case "BitComet 1.20":
+                case "qBittorrent v4.6.2":
                     {
-                        client.Name = "BitComet 1.20";
+                        client.Name = "qBittorrent v4.6.2";
                         client.HttpProtocol = "HTTP/1.1";
                         client.HashUpperCase = true;
                         client.Key = GenerateIdString("numeric", 5, false, false);
@@ -22,7 +22,7 @@
                         client.DefNumWant = 200;
                         client.Parse = true;
                         client.SearchString = "&peer_id=-BC0120-";
-                        client.ProcessName = "BitComet";
+                        client.ProcessName = "qBittorrent";
                         client.StartOffset = 0;
                         client.MaxOffset = 60000000;
                         break;
@@ -637,13 +637,13 @@
                     }
                 #endregion
                 #region Deluge
-                case "Deluge 1.2.0":
+                case "Deluge v1.3.15":
                     {
-                        client.Name = "Deluge 1.2.0";
+                        client.Name = "Deluge v1.3.15";
                         client.HttpProtocol = "HTTP/1.0";
                         client.HashUpperCase = false;
                         client.Key = GenerateIdString("alphanumeric", 8, false, false);
-                        client.Headers = "Host: {host}\r\nUser-Agent: Deluge 1.2.0\r\nConnection: close\r\nAccept-Encoding: gzip\r\n";
+                        client.Headers = "Host: {host}\r\nUser-Agent: Deluge v1.3.15 \r\nConnection: close\r\nAccept-Encoding: gzip\r\n";
                         client.PeerID = "-DE1200-" + GenerateIdString("alphanumeric", 12, false, false);
                         client.Query = "info_hash={infohash}&peer_id={peerid}&port={port}&uploaded={uploaded}&downloaded={downloaded}&left={left}&event={event}&key={key}&compact=1&numwant={numwant}&supportcrypto=1&no_peer_id=1";
                         client.DefNumWant = 200;
